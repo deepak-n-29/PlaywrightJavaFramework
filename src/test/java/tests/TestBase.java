@@ -32,11 +32,16 @@ public class TestBase {
         playwright = Playwright.create();
 
         if("firefox".equalsIgnoreCase(browserName)){
-            browser = playwright.firefox().launch(new BrowserType.LaunchOptions().setHeadless(false));
+//            browser = playwright.firefox().launch(new BrowserType.LaunchOptions().setHeadless(false));
+            browser = playwright.webkit().launch();
+
         } else if("safari".equalsIgnoreCase(browserName)){
-            browser = playwright.webkit().launch(new BrowserType.LaunchOptions().setHeadless(false));
+//            browser = playwright.webkit().launch(new BrowserType.LaunchOptions().setHeadless(false));
+            browser = playwright.webkit().launch();
+
         } else {
-            browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setChannel("chrome").setHeadless(false));
+//            browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setChannel("chrome").setHeadless(false));
+            browser = playwright.chromium().launch();
         }
 
         page = browser.newPage();
