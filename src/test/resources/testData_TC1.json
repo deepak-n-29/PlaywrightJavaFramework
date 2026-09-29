@@ -1,0 +1,10 @@
+[
+  {
+    "email": "user!yahoo.com",
+    "password": "password1"
+  },
+  {
+    "email": "user!gmail.com",
+    "password": "password2"
+  }
+]
